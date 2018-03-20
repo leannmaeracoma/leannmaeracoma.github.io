@@ -34,8 +34,8 @@ ul li {
 	float: left;
 	list-style-type: none;
 	padding-top: 20px;
-	padding-left: 19.8px;
-	padding-right: 100px;
+	padding-left: 80px;
+	padding-right: 60px;
 	/* background-color: #D9CA9C; */
 }
 ul li a {
@@ -65,11 +65,18 @@ h1 {
 
 h2 {
 	color: #874E4C;
+	text-align: center;
 }
 h3 {
-	color:#E2B091; font-style: italic;
+	color:#E2B091; 
+	font-style: italic;
+	text-align: center;
 }
-
+p {
+	color: white;
+	text-align: center;
+	float: center;
+}
 #sketch {
 	border:none;
 	width: 98.75Vw;
