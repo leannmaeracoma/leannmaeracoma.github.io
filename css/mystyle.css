@@ -86,6 +86,9 @@ p {
 	text-align: center;
 	float: center;
 }
+a {
+	color: black;
+}
 #sketch {
 	border:none;
 	width: 98.75Vw;
