@@ -87,12 +87,13 @@ p {
 	float: center;
 }
 a {
-	color: white;
+	color: black;
 }
 #sketch {
-	border:none;
+	border: none;
 	width: 98.75Vw;
 	height: 50Vh;
+	background-color: white;
 }
 
 #overwrite {
