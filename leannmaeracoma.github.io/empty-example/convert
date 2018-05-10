@@ -1,0 +1,16 @@
+function setup() {
+  size(640, 360);
+  noSmooth();
+  fill(126);
+  background(255);
+}
+
+function draw() {
+  if (mousePressed) {
+    stroke(255,0,0);
+  } else {
+    stroke(0,0,255);
+  }
+  line(mouseX-66, mouseY, mouseX+66, mouseY);
+  line(mouseX, mouseY-66, mouseX, mouseY+66); 
+}

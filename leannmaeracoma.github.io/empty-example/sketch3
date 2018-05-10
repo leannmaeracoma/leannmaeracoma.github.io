@@ -1,0 +1,15 @@
+function setup(){
+	createCanvas(windowWidth,windowHeight);
+	strokeWeigth(4);
+}
+function draw() {
+	if (mouseX < 300) {
+	stroke (255,0,0);
+	}
+	eles{
+	stroke (0);
+	}
+	if (mouseIsPressed == true) {
+	ellipse (mouseX,mouseY,30,30)
+	}
+}
