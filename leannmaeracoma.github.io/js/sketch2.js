@@ -35,7 +35,7 @@ function star(x, y, radius1, radius2, npoints) {
   var angle = TWO_PI / npoints;
   var halfAngle = angle/2.0;
   beginShape();
-  for (var a = 0; a < TWO_PI; a += angle) {
+  for (let a = 0; a < TWO_PI; a += angle) {
     var sx = x + cos(a) * radius2;
     var sy = y + sin(a) * radius2;
     vertex(sx, sy);
