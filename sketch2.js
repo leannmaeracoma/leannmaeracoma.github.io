@@ -1,46 +1,30 @@
-// for red, green, and blue color values
-var r, g, b;
-
-function setup() {
-  createCanvas(720, 400);
-  // Pick colors randomly
-  r = random(255);
-  g = random(255);
-  b = random(255);
+function setup(){
+  createCanvas(800,600);
+  smooth();
 }
-
-function draw() {
-  background(255);
-  // Draw a circle
-  strokeWeight(2);
-  stroke(r, g, b);
-  fill(r, g, b, 127);
-  ellipse(360, 200, 200, 200);
-  rect(50, 100, 200, 200);
-  star(520, 200, 30, 70, 5); 
-}
-
-// When the user clicks the mouse
-function mousePressed() {
-  // Check if mouse is inside the circle
-  var d = dist(mouseX, mouseY, 360, 200);
-  if (d < 100) {
-    // Pick new random color values
-    r = random(255);
-    g = random(255);
-    b = random(255);
+function draw(){
+  background(102);
+  if(mouseIsPressed){
+   fill(255,255,0); //yellow
+   stroke(0);
+  } else{
+   fill(255); 
+   stroke(0);
   }
+  push();
+  star(mouseX, mouseY, pmouseX, pmouseY, 5); 
+  pop();
 }
-function star(x, y, radius1, radius2, npoints) {
-  var angle = TWO_PI / npoints;
-  var halfAngle = angle/2.0;
+function star( x,  y,  radius1,  radius2,  npovars) {
+    var angle = TWO_PI / npovars;
+  var halfAngle = angle/2;
   beginShape();
-  for (var a = 0; a < TWO_PI; a += angle) {
+  for (let a = 0; a < TWO_PI; a += angle) {
     var sx = x + cos(a) * radius2;
     var sy = y + sin(a) * radius2;
     vertex(sx, sy);
-    sx = x + cos(a+halfAngle) * radius1;
-    sy = y + sin(a+halfAngle) * radius1;
+    sx = mouseX + cos(a+halfAngle) * radius1;
+    sy = mouseY + sin(a+halfAngle) * radius1; //this makes the star move a lot, watch out for that
     vertex(sx, sy);
   }
   endShape(CLOSE);
